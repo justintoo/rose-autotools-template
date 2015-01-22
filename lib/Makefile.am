@@ -1,1 +1,1 @@
-SUBDIRS = gtest
+SUBDIRS = project gtest

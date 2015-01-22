@@ -25,7 +25,7 @@ AC_INIT([PROJECT_NAME], [0.0.0], [AUTHOR@EMAIL.COM])
 #
 # [http://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Input.html]
 #-------------------------------------------------------------------------------
-AC_CONFIG_SRCDIR([src/project/func.h])
+AC_CONFIG_SRCDIR([lib/project/func.h])
 
 #-------------------------------------------------------------------------------
 # AC_CONFIG_MACRO_DIR (dir)
@@ -46,7 +46,7 @@ AC_CONFIG_MACRO_DIR([m4])
 #
 # [https://www.gnu.org/software/autoconf/manual/autoconf-2.65/html_node/Configuration-Headers.html]
 #-------------------------------------------------------------------------------
-AC_CONFIG_HEADERS([src/project/config.h])
+AC_CONFIG_HEADERS([lib/project/config.h])
 
 #-------------------------------------------------------------------------------
 # AC_CONFIG_AUX_DIR
@@ -257,9 +257,11 @@ AC_SUBST([GTEST_LIBS])
 AC_CONFIG_FILES([Makefile
                  lib/Makefile
                  lib/gtest/Makefile
-                 src/Makefile
-                 src/project/Makefile
-                 tests/Makefile
+                 lib/project/Makefile
+                 ])
+AC_CONFIG_FILES([bin/Makefile
+                 ])
+AC_CONFIG_FILES([tests/Makefile
                  ])
 AC_OUTPUT
 
